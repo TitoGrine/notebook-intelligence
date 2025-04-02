@@ -1,0 +1,17 @@
+import { CodeCell } from '@jupyterlab/cells';
+import { CodeEditor } from '@jupyterlab/codeeditor';
+import { NotebookPanel } from '@jupyterlab/notebook';
+export declare function removeAnsiChars(str: string): string;
+export declare function waitForDuration(duration: number): Promise<void>;
+export declare function moveCodeSectionBoundaryMarkersToNewLine(source: string): string;
+export declare function extractLLMGeneratedCode(code: string): string;
+export declare function isDarkTheme(): boolean;
+export declare function markdownToComment(source: string): string;
+export declare function cellOutputAsText(cell: CodeCell): string;
+export declare function getTokenCount(source: string): number;
+export declare function compareSelectionPoints(lhs: CodeEditor.IPosition, rhs: CodeEditor.IPosition): boolean;
+export declare function compareSelections(lhs: CodeEditor.IRange, rhs: CodeEditor.IRange): boolean;
+export declare function isSelectionEmpty(selection: CodeEditor.IRange): boolean;
+export declare function getSelectionInEditor(editor: CodeEditor.IEditor): string;
+export declare function getWholeNotebookContent(np: NotebookPanel): string;
+export declare function applyCodeToSelectionInEditor(editor: CodeEditor.IEditor, code: string): void;
